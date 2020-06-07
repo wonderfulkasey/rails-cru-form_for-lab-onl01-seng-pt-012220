@@ -1,10 +1,10 @@
 class GenresController < ApplicationController
 
-    def show 
+    def show
         @genre = Genre.find(params[:id])
     end
 
-    def new 
+    def new
         @genre = Genre.new
     end
 
@@ -17,7 +17,7 @@ class GenresController < ApplicationController
         @genre = Genre.find(params[:id])
     end
 
-    def update 
+    def update
         @genre = Genre.find(params[:id])
         @genre.update(strong_params(:name, :bio))
         redirect_to genre_path(@genre)
